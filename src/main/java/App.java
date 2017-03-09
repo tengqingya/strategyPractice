@@ -1,11 +1,12 @@
-package strategyPractice;
-
 import original.BlackDog;
 import original.Dog;
 import original.RedDog;
 import original2.BlackDog2;
 import original2.Dog2;
 import original2.RedDog2;
+import strategyPractice.dog.BlackDog3;
+import strategyPractice.dog.Dog3;
+import strategyPractice.dog.RedDog3;
 
 /**
  * Hello world!
@@ -40,5 +41,16 @@ public class App
         black2.eat();
         black2.say();
         black2.dosth();
+
+        System.out.println("-------------------------------------------");
+        Dog3 red3 =new RedDog3();
+        Dog3 black3 =new BlackDog3();
+        red3.color();
+        red3.say();
+        red3.eat();
+
+        black3.color();
+        black3.say();
+        black3.eat();
     }
 }
