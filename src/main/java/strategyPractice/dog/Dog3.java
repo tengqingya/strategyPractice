@@ -1,6 +1,7 @@
 package strategyPractice.dog;
 
 import strategyPractice.action.ColorInterface;
+import strategyPractice.action.FlyInterface;
 import strategyPractice.action.SayInterface;
 
 /**
@@ -10,6 +11,16 @@ import strategyPractice.action.SayInterface;
 public abstract class Dog3 {
     protected ColorInterface colorInterface;
     protected SayInterface sayInterface;
+    protected FlyInterface flyInterface;
+
+    public FlyInterface getFlyInterface() {
+        return flyInterface;
+    }
+
+    public void setFlyInterface( FlyInterface flyInterface ) {
+        this.flyInterface = flyInterface;
+    }
+
     public abstract void eat();
 
     public void say(){
@@ -34,5 +45,9 @@ public abstract class Dog3 {
 
     public void setSayInterface( SayInterface sayInterface ) {
         this.sayInterface = sayInterface;
+    }
+
+    public void fly(){
+        flyInterface.fly();
     }
 }

@@ -4,6 +4,9 @@ import original.RedDog;
 import original2.BlackDog2;
 import original2.Dog2;
 import original2.RedDog2;
+import strategyPractice.actionImpl.ColorRedImpl;
+import strategyPractice.actionImpl.FlyBlackImpl;
+import strategyPractice.actionImpl.FlyRedImpl;
 import strategyPractice.dog.BlackDog3;
 import strategyPractice.dog.Dog3;
 import strategyPractice.dog.RedDog3;
@@ -52,5 +55,14 @@ public class App
         black3.color();
         black3.say();
         black3.eat();
+        System.out.println("-------------------------------------------改需求拉------------------");
+        black3.setColorInterface(new ColorRedImpl());
+        black3.color();
+
+        System.out.println("-------------------------------------------新增需求拉------------------");
+        black3.setFlyInterface(new FlyBlackImpl());
+        red3.setFlyInterface(new FlyRedImpl());
+        black3.fly();
+        red3.fly();
     }
 }
